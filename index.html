@@ -30,13 +30,14 @@
       background-image: url("https://assets.codepen.io/9051928/gradient.png");
       background-size: 100vw;
       background-position: 0 0;
-      height: 400vh;
+      height: 100vh;
       color: var(--white);
       font-family: var(--font);
       font-weight: 400;
       font-size: var(--p);
       margin: 0;
       position: relative;
+      overflow-x: hidden;
     }
 
     .scroll-progress {
@@ -189,7 +190,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      padding: 8rem 2rem 2rem;
+      padding: 8rem 2rem 250px;
       gap: 2rem;
     }
 
@@ -273,18 +274,53 @@
     .project-card:hover {
       transform: translateY(-5px);
     }
+      footer {
+        background: rgba(31, 41, 55, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 2rem 0;
+        margin-top: auto;
+        text-align: center;
+        position: relative;
+        width: 100%;
+      }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: rgba(0, 0, 0, 0.3);
-      margin-top: auto;
-    }
-
-    .social-links {
+    .footer-content {
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 4rem;
+      padding: 1rem;
+    }
+
+    .footer-section h3 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-section ul li {
+      margin: 0.5rem 0;
+    }
+
+    .footer-section ul li a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .footer-section ul li a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1rem;
       margin-top: 1rem;
     }
   </style>
@@ -367,11 +403,28 @@
 </main>
 
 <footer>
-  <p>© 2024 PixelHeaven. All rights reserved.</p>
-  <div class="social-links">
-    <a href="#"><button>Twitter</button></a>
-    <a href="#"><button>Discord</button></a>
-    <a href="#"><button>GitHub</button></a>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Privacy policy</a></li>
+        <li><a href="#">Terms of service</a></li>
+        <li><a href="#">Cotact Us</a></li>
+        <li><a href="#">Join Discord</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="#">Code Templates</a></li>
+        <li><a href="#">Developer Tools</a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 PixelHeaven. All rights reserved.</p>
+    <p>V 1.0 Beta</p>
   </div>
 </footer>
 
